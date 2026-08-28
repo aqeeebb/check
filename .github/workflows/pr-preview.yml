@@ -1,0 +1,17 @@
+name: PR Preview Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+
+jobs:
+  trigger-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Pipeline triggered successfully
+        run: echo "PR pipeline triggered! Ready to add build/test/deploy steps here."
