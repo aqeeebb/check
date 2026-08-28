@@ -15,3 +15,5 @@ jobs:
 
       - name: Pipeline triggered successfully
         run: echo "PR pipeline triggered! Ready to add build/test/deploy steps here."
+      - name: Extra step
+        run: echo "Testing PR trigger"
